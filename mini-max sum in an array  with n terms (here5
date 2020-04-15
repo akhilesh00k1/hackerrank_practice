@@ -1,0 +1,16 @@
+# Complete the miniMaxSum function below.
+def miniMaxSum(arr):
+    minimum=0
+    maximum=0
+    arr.sort()
+    for i in range(0,4):
+        minimum+=arr[i]
+    for j in range(4,0,-1):
+        maximum+=arr[j]
+    print(f"{minimum} {maximum}")
+
+
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
